@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+:root {
+  --color-bg: #fff;
+  --color-border: #e5e7eb;
+  --color-sidebar-item: #f3f4f6;
+  --primary-6: #4CC7A4 !important;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  font-family: "Roboto", sans-serif;
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  gap: 2rem;
+}
+
+.layout__main-content {
+  flex-grow: 1;
+}
+
+.sidebar__wrapper {
+  position: relative;
+}
+
+.sidebar {
+  width: 17rem;
+  height: 100%;
+  background-color: #4CC8A4;
+  padding: 1rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  overflow: hidden;
+}
+
+.sidebar__top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  justify-content: center;
+  background: #F4F4F4;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.sidebar__logo {
+  width: 110px;
+  height: 25px;
+}
+
+.sidebar__logo-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.sidebar__list {
+  list-style: none;
+}
+
+.sidebar__link {
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  margin-bottom: 1rem;
+  border-radius: 0.8rem;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.sidebar-line {
+    height: 1px;
+    width: 90%;
+    background-color: #ffffff6e;
+    margin: 20px auto;
+}
+
+.sidebar__link--active {
+  color: black;
+  background-color: white;
+}
+
+.sidebar__icon {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.sidebar__name {
+  margin-left: 0.5rem;
+}
+
+[data-collapse="true"] {
+  width: 5.3rem;
+}
+
+[data-collapse="true"] .sidebar__name,
+[data-collapse="true"] .sidebar__logo-name {
+  display: none;
+}
+
+[data-collapse="true"] .sidebar__link {
+  background-color: #d3efa1;
+}
+
+.sidebar-mini__logo {
+  display: none;  
+}
+
+.sidebar__logo {
+  display: block;
+}
+
+[data-collapse="true"] .sidebar-mini__logo {
+  display: block;
+  width: 60px;
+  height: 45px;
+}
+[data-collapse="true"] .sidebar__top{
+  padding: 5px;
+}
+
+[data-collapse="true"] .sidebar__logo {
+  display: none;
+}
+
+[data-collapse="true"] .sidebar__icon {
+  color: black !important;
+}
+
+.sidebar__icon svg {
+  font-size: 24px;
+  width: 20px;
+  margin-right: 20px;
+  height: 20px;
+}
+
+.head-tool svg {
+  font-size: 24px;
+  width: 20px;
+  height: 20px;
+}
+
+.bread-cumb {
+  display: flex;
+  grid-gap: 10px;
+  background: #EAFEF1;
+  border-radius: 999px;
+  padding: 16px;
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #038C8C;
+}
+
+.head-tool {
+  
+  margin: 60px;
+  padding: 30px 45px;
+  width: 90%;
+  background: #FFFFFF;
+  border: 1px solid #4CC8A4;
+  box-shadow: 0px 4px 44px -21px rgba(0, 0, 0, 0.25);
+  border-radius: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head-tool .tool {
+  display: flex;
+  align-items: center;
+  grid-gap: 40px;
+}
+
+.head-tool .tool svg {
+  width: 32px;
+  height: 32px;
+}
+
+.arco-avatar {
+  width: 56px !important;
+  height: 56px !important;
+  background: #e5e5e5;
+  border-radius: 17px;
+}
+
+.arco-avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.sidebar__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.employee-option {
+  display: flex;
+  width: 90%;
+  margin: 0px auto;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #77B67D;
+  justify-content: space-between;
+  padding: 20px 40px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.btn {
+  position: absolute;
+  right: 0;
+  top: 4.7rem;
+  border: none;
+  background-color: var(--color-bg);
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: translateX(50%);
+  font-size: 1.1rem;
+}
+
+.item-option {
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+}
+
+.item-option .button-plus {
+  background-color: #4CC7A4 !important;
+}
+
+.arco-checkbox-checked .arco-checkbox-mask {
+  background-color: #4CC7A4 !important;
+}
+
+.w-90 {
+  width: 90%;
+  margin: 0px auto;
+}
+
+.table-tool {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arco-input-inner-wrapper {
+  background: #F3EDED;
+  border: 1px solid #4CC8A4;
+  border-radius: 8px !important;
+  width: 400px;
+  height: 50px !important;
+}
+
+.arco-btn-text {
+  color: #4CC8A4 !important;
+  border-radius: 8px;
+  border: 1px solid #4CC8A4 !important;
+  height: 50px;
+}
